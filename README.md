@@ -3,8 +3,21 @@
 
 > **Status**: Main(대회용) 보드 주제 변경으로 **보류(Pending)**. 본 저장소는 **데모 보드 기반 사실 기록과 재현 가능한 검증 절차**를 제공합니다.
 
-![HERO](docs/images/hero.jpg)
-<!-- 권장 사진: 조립 완료 탑뷰(ESD 매트 위), 주요 블록 콜아웃 포함 -->
+<table>
+  <tr>
+    <td><a href="docs/images/pcb-top-3d.png"><img src="docs/images/pcb-top-3d.png" alt="Top 3D" width="100%"></a></td>
+    <td><a href="docs/images/pcb-bottom-3d.png"><img src="docs/images/pcb-bottom-3d.png" alt="Bottom 3D" width="100%"></a></td>
+    <td><a href="docs/images/hero-assembled.jpg"><img src="docs/images/hero-assembled.jpg" alt="Assembled" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Top 3D</sub></td>
+    <td align="center"><sub>Bottom 3D</sub></td>
+    <td align="center"><sub>Assembled</sub></td>
+  </tr>
+</table>
+
+
+
 
 ---
 
