@@ -62,7 +62,7 @@ LoRa(433 MHz)와 Iridium SBD(백업)를 통해 **실시간 텔레메트리/원�
 
 ---
 
-## 2) 하드웨어 한눈에 보기
+## 2) 하드웨어 Spec
 
 | 항목 | 내용 |
 |---|---|
@@ -74,7 +74,7 @@ LoRa(433 MHz)와 Iridium SBD(백업)를 통해 **실시간 텔레메트리/원�
 | 무선/백업 | LoRa 433 MHz(UART+M0/M1/AUX), Iridium 9602(UART+HW Flow) |
 | 센싱 | GPS(MAX-M10S, PPS), IMU(BNO085), Baro(MS5611), Temp(AS6221×4), RTC(DS3231M), Current(INA219B) |
 | 전원 | 12 V 입력 → LM2596S-3.3/5.0, 벌크캡(bank) |
-| PCB | 6-Layer(데모). 차기: ≥8-Layer(권장 10–12) |
+| PCB | 6-Layer |
 | EDA | KiCad 9.0.4 |
 
 **SDRAM 버스 토폴로지**
