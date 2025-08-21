@@ -34,7 +34,8 @@
 
 ## 1) 개요
 
-AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, **차폐 조건만 다르게** 적용하여 **SEU(비트 플립) 발생 특성**을 정량 비교하기 위한 검증 플랫폼입니다. LoRa(433 MHz)와 Iridium SBD(백업)를 통해 **실시간 텔레메트리/원격 제어**가 가능하며, microSD로 **에러맵 및 환경 로그**를 저장합니다.
+AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, **차폐 조건만 다르게** 적용하여 **SEU(비트 플립) 발생 특성**을 정량 비교하기 위한 검증 플랫폼입니다. 
+LoRa(433 MHz)와 Iridium SBD(백업)를 통해 **실시간 텔레메트리/원격 제어**가 가능하며, microSD로 **에러맵 및 환경 로그**를 저장합니다.
 
 **핵심 구성**
 - **MCU**: STM32H745XIH6 (Cortex-M7 @480 MHz, Flash 2 MB)
