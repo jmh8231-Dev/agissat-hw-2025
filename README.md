@@ -81,7 +81,7 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 
 ---
 
-## 4) Bring-up 결과(데모 보드)
+## 4) Bring-up Result(Demo Board)
 
 | 기능 | 상태 | 비고 |
 |---|---|---|
@@ -117,7 +117,7 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 
 ---
 
-## 6) 펌웨어·시험(재현 가능한 흐름)
+## 6) 펌웨어·시험
 
 1. **부팅 셀프체크**: 전원/온도/클럭 → I²C 스캔 → SD 마운트  
 2. **메모리 시험**: 칩별 활성 → 패턴 스윕 → 주파수 단계 증가  
@@ -126,6 +126,7 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 
 ---
 
+## 7) 저장소 구조
 <pre>
 agissat-hw-2025/
 ├─ hw/                 # KiCad 원본, 스택업/임피던스 메모
