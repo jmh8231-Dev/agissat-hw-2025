@@ -1,7 +1,7 @@
 # AgisSAT Demo Board  
 *Aegis Core Board의 알고리즘/하드웨어 검증용 데모 보드*
 
-> **Status**: 대회 주제 변경으로 **보류(Pending)**.
+> **Status**: 대회 주제 변경으로 AgisSAT Core Board 개발 **보류(Pending)**.
 >
 > 본 저장소는 **데모 보드 기반 사실 기록과 재현 가능한 검증 절차**를 제공합니다.
 
