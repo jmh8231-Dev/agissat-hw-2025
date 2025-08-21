@@ -21,9 +21,15 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 - **항법/센서**: MAX-M10S(GPS, PPS), BNO085(IMU), MS5611-01BA(Baro), AS6221×4(Temp), DS3231M(RTC), INA219B(Current)
 - **전원**: 12 V in → LM2596S-3.3 / LM2596S-5.0 (Iridium 버스트 대응 벌크캡)
 
-![BLOCK](docs/images/block-diagram.png)
+# OCB Block Diagram
+![BLOCK](docs/images/block-diagram-obc.jpg)
 <!-- 권장 그림: OBC ⇄ SDRAM Array ⇄ Comms/Sensors ⇄ Power 블록 다이어그램 -->
 
+# Communication Block Diagram
+![BLOCK](docs/images/block-diagram-comm.jpg)
+
+# Power Block Diagram
+![BLOCK](docs/images/block-diagram-power.jpg)
 ---
 
 ## 2) 하드웨어 한눈에 보기
