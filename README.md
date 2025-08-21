@@ -132,7 +132,7 @@ agissat-hw-2025/
 ├─ hw/                 # KiCad 원본, 스택업/임피던스 메모
 ├─ docs/
 │  ├─ images/          # 사진/다이어그램
-│  ├─ schematics/      # 시트별 PNG/PDF
-│  └─ Ref              # 설계시 참고 문
+│  ├─ schematics/      # 회로도 PDF
+│  └─ Ref              # 설계시 참고 문서
 └─ README.md
 </pre>
