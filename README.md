@@ -118,3 +118,4 @@ agissat-hw-2025/
 │  ├─ schematics/      # 시트별 PNG/PDF
 │  └─ logs/            # 샘플 로그(소용량)
 └─ README.md
+
