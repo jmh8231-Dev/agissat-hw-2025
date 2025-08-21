@@ -56,7 +56,7 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 ## 3) 차폐 설계 (Shielding Stacks)
 
 <p align="center">
-  <img src="docs/images/shielding-stacks.png" alt="SDRAM Shielding Stacks (Unshielded / FeSn 0.2mm / FeSn 0.2mm + PE / FeSn Multilayer + SnPb)" width="820">
+  <img src="docs/images/shielding-stacks.jpg" alt="SDRAM Shielding Stacks (Unshielded / FeSn 0.2mm / FeSn 0.2mm + PE / FeSn Multilayer + SnPb)" width="820">
 </p>
 
 > 동일한 SDRAM 4개에 서로 다른 차폐 조건을 적용하고, **동일 FMC 버스·동일 접근 패턴**에서 **SEU(비트 플립) 발생률**을 비교합니다.  
