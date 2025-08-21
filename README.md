@@ -53,21 +53,30 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 
 ---
 
-## 3) 제조·어셈블리 가이드 (필수)
+## 3) 차폐 설계 (Shielding Stacks)
 
-### MS5611-01BA (기압)
-- **No-Clean 페이스트만 사용**, **세척 금지**
-- **압력 포트 오염 금지**, **하부 라우팅 금지**
-- **단회 실장 원칙**(재가열 납땜 불가)
+<p align="center">
+  <img src="docs/images/shielding-stacks.png" alt="SDRAM Shielding Stacks (Unshielded / FeSn 0.2mm / FeSn 0.2mm + PE / FeSn Multilayer + SnPb)" width="820">
+</p>
 
-### 기타
-- GDK101 센서(사용 시) 5 V MCU 인터페이스: **직렬 100 Ω** 필요
-- I²C 풀업은 **보드 중앙 1쌍(2.2–4.7 kΩ)** 권장, 중복 풀업 제거
+> 동일한 SDRAM 4개에 서로 다른 차폐 조건을 적용하고, **동일 FMC 버스·동일 접근 패턴**에서 **SEU(비트 플립) 발생률**을 비교합니다.  
+> 결과 평가는 차폐 효율 지표 **η = 1 − (E_shield / E_bare)** 로 산출합니다.
 
-**체크리스트**
-- [V] 초음파 세척 가능 부품 **선실장/세척**
-- [V] 세척 불가 부품 **No-Clean 최소량**
-- [V] **MS5611 단회 실장** 준수
+| 조건 | 의도 | 구성(예) | 비고 |
+|---|---|---|---|
+| **Unshielded** | 기준선(Baseline) 확보 | 차폐 없음 | 비트플립 빈도 참조용 |
+| **FeSn 0.2 mm** | 금속 단층 효과 확인 | FeSn 0.2 mm 케이지 | 경량·제작 용이 |
+| **FeSn 0.2 mm + PE 충진** | 고수소 재료의 2차 방사선 저감 | FeSn 0.2 mm + **PE**(폴리에틸렌) 충진 | 경량 대비 효과 기대 |
+| **FeSn 다층 + SnPb 충진** | 고밀도·다층 구조의 상한 성능 확인 | FeSn 다층 + **SnPb** 충진 | 무게↑, 최대 저감 한계 평가 |
+
+**실험 로그**  
+- 칩별 동일 패턴(`0x00/0xFF/0xAA55/MARCH C-`)·동일 부하·동일 시간으로 측정  
+- 환경 변수 동시 로깅: **온도(AS6221×4), 기압(MS5611), 전류(INA219B), GPS-PPS**  
+- 결과 저장: `/logs/YYYYMMDD/sdram_map_ch{1..4}_<freq>.csv` (주소/비트/타임스탬프)
+
+> 이미지 교체 가이드  
+> - 파일: `docs/images/shielding-stacks.png`  
+> - 권장: 1200×700 이상, 배경 간결, 네 조건의 색상 구분 유지(레전드 포함)
 
 ---
 
@@ -118,10 +127,9 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 
 agissat-hw-2025/
 ├─ hw/                 # KiCad 원본, 스택업/임피던스 메모
-├─ fw/                 # 테스트 펌웨어(메모리 테스트/로거)
 ├─ docs/
 │  ├─ images/          # 사진/다이어그램
 │  ├─ schematics/      # 시트별 PNG/PDF
-│  └─ logs/            # 샘플 로그(소용량)
+│  └─ Ref              # 설계시 참고 문
 └─ README.md
 
