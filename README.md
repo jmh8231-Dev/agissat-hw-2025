@@ -22,22 +22,18 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 - **전원**: 12 Vin → LM2596S-3.3 / LM2596S-5.0 (Iridium 버스트 대응 벌크캡)
 
 <h3>Block Diagrams</h3>
-<p align="center">
-  <a href="docs/images/block-diagram-obc.jpg">
-    <img src="docs/images/block-diagram-obc.jpg" alt="OBC Block Diagram" width="32%">
-  </a>
-  <a href="docs/images/block-diagram-comm.jpg">
-    <img src="docs/images/block-diagram-comm.jpg" alt="Communication Block Diagram" width="32%">
-  </a>
-  <a href="docs/images/block-diagram-power.jpg">
-    <img src="docs/images/block-diagram-power.jpg" alt="Power Block Diagram" width="32%">
-  </a>
-</p>
-<p align="center">
-  <sub>OBC</sub>&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub>Communication</sub>&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub>Power</sub>
-</p>
+<table>
+  <tr>
+    <td><a href="docs/images/block-diagram-obc.jpg"><img src="docs/images/block-diagram-obc.jpg" alt="OBC" width="100%"></a></td>
+    <td><a href="docs/images/block-diagram-comm.jpg"><img src="docs/images/block-diagram-comm.jpg" alt="Communication" width="100%"></a></td>
+    <td><a href="docs/images/block-diagram-power.jpg"><img src="docs/images/block-diagram-power.jpg" alt="Power" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>OBC</sub></td>
+    <td align="center"><sub>Communication</sub></td>
+    <td align="center"><sub>Power</sub></td>
+  </tr>
+</table>
 
 ---
 
