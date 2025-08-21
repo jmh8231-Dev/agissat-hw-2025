@@ -69,14 +69,10 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 | **FeSn 0.2 mm + PE 충진** | 고수소 재료의 2차 방사선 저감 | FeSn 0.2 mm + **PE**(폴리에틸렌) 충진 | 경량 대비 효과 기대 |
 | **FeSn 다층 + SnPb 충진** | 고밀도·다층 구조의 상한 성능 확인 | FeSn 다층 + **SnPb** 충진 | 무게↑, 최대 저감 한계 평가 |
 
-**실험 로그**  
+**테스트 로그**  
 - 칩별 동일 패턴(`0x00/0xFF/0xAA55/MARCH C-`)·동일 부하·동일 시간으로 측정  
 - 환경 변수 동시 로깅: **온도(AS6221×4), 기압(MS5611), 전류(INA219B), GPS-PPS**  
 - 결과 저장: `/logs/YYYYMMDD/sdram_map_ch{1..4}_<freq>.csv` (주소/비트/타임스탬프)
-
-> 이미지 교체 가이드  
-> - 파일: `docs/images/shielding-stacks.png`  
-> - 권장: 1200×700 이상, 배경 간결, 네 조건의 색상 구분 유지(레전드 포함)
 
 ---
 
@@ -125,6 +121,7 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 
 ---
 
+<pre>
 agissat-hw-2025/
 ├─ hw/                 # KiCad 원본, 스택업/임피던스 메모
 ├─ docs/
@@ -132,4 +129,4 @@ agissat-hw-2025/
 │  ├─ schematics/      # 시트별 PNG/PDF
 │  └─ Ref              # 설계시 참고 문
 └─ README.md
-
+</pre>
