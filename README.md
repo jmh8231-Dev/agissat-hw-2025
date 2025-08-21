@@ -3,23 +3,19 @@
 
 > **Status**: Main(대회용) 보드 주제 변경으로 **보류(Pending)**. 본 저장소는 **데모 보드 기반 사실 기록과 재현 가능한 검증 절차**를 제공합니다.
 
-<!-- Hero: 3-up gallery -->
-<p align="center">
-  <a href="docs/images/pcb-top-3d.png">
-    <img src="docs/images/pcb-top-3d.png" alt="PCB Top 3D Render" width="32%">
-  </a>
-  <a href="docs/images/pcb-bottom.png">
-    <img src="docs/images/pcb-bottom.png" alt="PCB Bottom 3D Render" width="32%">
-  </a>
-  <a href="docs/images/hero.jpg">
-    <img src="docs/images/hero.jpg" alt="Assembled Board (Photo)" width="32%">
-  </a>
-</p>
-<p align="center">
-  <sub>Top 3D</sub>&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub>Bottom 3D</sub>&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub>Assembled</sub>
-</p>
+<table>
+  <tr>
+    <td><a href="docs/images/pcb-top-3d.png"><img src="docs/images/pcb-top-3d.png" alt="Top 3D" width="100%"></a></td>
+    <td><a href="docs/images/pcb-bottom-3d.png"><img src="docs/images/pcb-bottom-3d.png" alt="Bottom 3D" width="100%"></a></td>
+    <td><a href="docs/images/hero-assembled.jpg"><img src="docs/images/hero-assembled.jpg" alt="Assembled" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Top 3D</sub></td>
+    <td align="center"><sub>Bottom 3D</sub></td>
+    <td align="center"><sub>Assembled</sub></td>
+  </tr>
+</table>
+
 
 
 
