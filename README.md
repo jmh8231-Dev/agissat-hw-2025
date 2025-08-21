@@ -29,9 +29,9 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
     <td><a href="docs/images/block-diagram-power.jpg"><img src="docs/images/block-diagram-power.jpg" alt="Power" width="100%"></a></td>
   </tr>
   <tr>
-    <td align="center"><sub>**OBC**</sub></td>
-    <td align="center"><sub>**Communication**</sub></td>
-    <td align="center"><sub>**Power**</sub></td>
+    <td align="center"><sub>OBC</sub></td>
+    <td align="center"><sub>Communication</sub></td>
+    <td align="center"><sub>Power</sub></td>
   </tr>
 </table>
 
