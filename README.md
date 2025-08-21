@@ -14,22 +14,31 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 
 **핵심 구성**
 - **MCU**: STM32H745XIH6 (Cortex-M7 @480 MHz, Flash 2 MB)
-- **SDRAM**: IS42S32160F-6BLI ×4 (FMC 16-bit 공유 버스, 칩별 /CS)
+- **SDRAM**: IS42S32160F-6BLI ×4 (FMC 32-bit 공유 버스, 칩별 /CS)
 - **디코더**: SN74LVC138A 계획(데모 임시: 74HC138 점퍼 대체)
 - **저장/디버그**: SDIO microSD, USB-C FS(VCP), SWD 10-pin
 - **통신**: LoRa 433 MHz (E32-433T37S), Iridium 9602 SBD(백업)
 - **항법/센서**: MAX-M10S(GPS, PPS), BNO085(IMU), MS5611-01BA(Baro), AS6221×4(Temp), DS3231M(RTC), INA219B(Current)
-- **전원**: 12 V in → LM2596S-3.3 / LM2596S-5.0 (Iridium 버스트 대응 벌크캡)
+- **전원**: 12 Vin → LM2596S-3.3 / LM2596S-5.0 (Iridium 버스트 대응 벌크캡)
 
-# OCB Block Diagram
-![BLOCK](docs/images/block-diagram-obc.jpg)
-<!-- 권장 그림: OBC ⇄ SDRAM Array ⇄ Comms/Sensors ⇄ Power 블록 다이어그램 -->
+<h3>Block Diagrams</h3>
+<p align="center">
+  <a href="docs/images/block-diagram-obc.jpg">
+    <img src="docs/images/block-diagram-obc.jpg" alt="OBC Block Diagram" width="32%">
+  </a>
+  <a href="docs/images/block-diagram-comm.jpg">
+    <img src="docs/images/block-diagram-comm.jpg" alt="Communication Block Diagram" width="32%">
+  </a>
+  <a href="docs/images/block-diagram-power.jpg">
+    <img src="docs/images/block-diagram-power.jpg" alt="Power Block Diagram" width="32%">
+  </a>
+</p>
+<p align="center">
+  <sub>OBC</sub>&nbsp;&nbsp;&nbsp;&nbsp;
+  <sub>Communication</sub>&nbsp;&nbsp;&nbsp;&nbsp;
+  <sub>Power</sub>
+</p>
 
-# Communication Block Diagram
-![BLOCK](docs/images/block-diagram-comm.jpg)
-
-# Power Block Diagram
-![BLOCK](docs/images/block-diagram-power.jpg)
 ---
 
 ## 2) 하드웨어 한눈에 보기
