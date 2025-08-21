@@ -14,22 +14,27 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 
 **핵심 구성**
 - **MCU**: STM32H745XIH6 (Cortex-M7 @480 MHz, Flash 2 MB)
-- **SDRAM**: IS42S32160F-6BLI ×4 (FMC 16-bit 공유 버스, 칩별 /CS)
+- **SDRAM**: IS42S32160F-6BLI ×4 (FMC 32-bit 공유 버스, 칩별 /CS)
 - **디코더**: SN74LVC138A 계획(데모 임시: 74HC138 점퍼 대체)
 - **저장/디버그**: SDIO microSD, USB-C FS(VCP), SWD 10-pin
 - **통신**: LoRa 433 MHz (E32-433T37S), Iridium 9602 SBD(백업)
 - **항법/센서**: MAX-M10S(GPS, PPS), BNO085(IMU), MS5611-01BA(Baro), AS6221×4(Temp), DS3231M(RTC), INA219B(Current)
-- **전원**: 12 V in → LM2596S-3.3 / LM2596S-5.0 (Iridium 버스트 대응 벌크캡)
+- **전원**: 12 Vin → LM2596S-3.3 / LM2596S-5.0 (Iridium 버스트 대응 벌크캡)
 
-# OCB Block Diagram
-![BLOCK](docs/images/block-diagram-obc.jpg)
-<!-- 권장 그림: OBC ⇄ SDRAM Array ⇄ Comms/Sensors ⇄ Power 블록 다이어그램 -->
+<h3>Block Diagrams</h3>
+<table>
+  <tr>
+    <td><a href="docs/images/block-diagram-obc.jpg"><img src="docs/images/block-diagram-obc.jpg" alt="OBC" width="100%"></a></td>
+    <td><a href="docs/images/block-diagram-comm.jpg"><img src="docs/images/block-diagram-comm.jpg" alt="Communication" width="100%"></a></td>
+    <td><a href="docs/images/block-diagram-power.jpg"><img src="docs/images/block-diagram-power.jpg" alt="Power" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>OBC</sub></td>
+    <td align="center"><sub>Communication</sub></td>
+    <td align="center"><sub>Power</sub></td>
+  </tr>
+</table>
 
-# Communication Block Diagram
-![BLOCK](docs/images/block-diagram-comm.jpg)
-
-# Power Block Diagram
-![BLOCK](docs/images/block-diagram-power.jpg)
 ---
 
 ## 2) 하드웨어 한눈에 보기
@@ -56,7 +61,7 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 ## 3) 차폐 설계 (Shielding Stacks)
 
 <p align="center">
-  <img src="docs/images/shielding-stacks.png" alt="SDRAM Shielding Stacks (Unshielded / FeSn 0.2mm / FeSn 0.2mm + PE / FeSn Multilayer + SnPb)" width="820">
+  <img src="docs/images/shielding-stacks.jpg" alt="SDRAM Shielding Stacks (Unshielded / FeSn 0.2mm / FeSn 0.2mm + PE / FeSn Multilayer + SnPb)" width="820">
 </p>
 
 > 동일한 SDRAM 4개에 서로 다른 차폐 조건을 적용하고, **동일 FMC 버스·동일 접근 패턴**에서 **SEU(비트 플립) 발생률**을 비교합니다.  
@@ -69,18 +74,14 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 | **FeSn 0.2 mm + PE 충진** | 고수소 재료의 2차 방사선 저감 | FeSn 0.2 mm + **PE**(폴리에틸렌) 충진 | 경량 대비 효과 기대 |
 | **FeSn 다층 + SnPb 충진** | 고밀도·다층 구조의 상한 성능 확인 | FeSn 다층 + **SnPb** 충진 | 무게↑, 최대 저감 한계 평가 |
 
-**실험 로그**  
+**테스트 로그**  
 - 칩별 동일 패턴(`0x00/0xFF/0xAA55/MARCH C-`)·동일 부하·동일 시간으로 측정  
 - 환경 변수 동시 로깅: **온도(AS6221×4), 기압(MS5611), 전류(INA219B), GPS-PPS**  
 - 결과 저장: `/logs/YYYYMMDD/sdram_map_ch{1..4}_<freq>.csv` (주소/비트/타임스탬프)
 
-> 이미지 교체 가이드  
-> - 파일: `docs/images/shielding-stacks.png`  
-> - 권장: 1200×700 이상, 배경 간결, 네 조건의 색상 구분 유지(레전드 포함)
-
 ---
 
-## 4) Bring-up 결과(데모 보드)
+## 4) Bring-up Result(Demo Board)
 
 | 기능 | 상태 | 비고 |
 |---|---|---|
@@ -116,7 +117,7 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 
 ---
 
-## 6) 펌웨어·시험(재현 가능한 흐름)
+## 6) 펌웨어·시험
 
 1. **부팅 셀프체크**: 전원/온도/클럭 → I²C 스캔 → SD 마운트  
 2. **메모리 시험**: 칩별 활성 → 패턴 스윕 → 주파수 단계 증가  
@@ -125,11 +126,13 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 
 ---
 
+## 7) 저장소 구조
+<pre>
 agissat-hw-2025/
 ├─ hw/                 # KiCad 원본, 스택업/임피던스 메모
 ├─ docs/
 │  ├─ images/          # 사진/다이어그램
-│  ├─ schematics/      # 시트별 PNG/PDF
-│  └─ Ref              # 설계시 참고 문
+│  ├─ schematics/      # 회로도 PDF
+│  └─ Ref              # 설계시 참고 문서
 └─ README.md
-
+</pre>
