@@ -153,7 +153,7 @@ AgisSAT Demo Board는 COTS SDRAM 4개를 **동일 FMC 버스**에 연결하고, 
 ## 7) 저장소 구조
 <pre>
 agissat-hw-2025/
-├─ hw/                 # KiCad 원본, 스택업/임피던스 메모
+| # KiCad Project File
 ├─ docs/
 │  ├─ images/          # 사진/다이어그램
 │  ├─ schematics/      # 회로도 PDF
