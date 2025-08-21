@@ -1,23 +1,37 @@
 # AgisSAT Demo Board  
 *Aegis Core Board의 알고리즘/하드웨어 검증용 데모 보드*
 
-> **Status**: Main(대회용) 보드 주제 변경으로 **보류(Pending)**. 본 저장소는 **데모 보드 기반 사실 기록과 재현 가능한 검증 절차**를 제공합니다.
+> **Status**: 대 주제 변경으로 **보류(Pending)**. 본 저장소는 **데모 보드 기반 사실 기록과 재현 가능한 검증 절차**를 제공합니다.
 
 <table>
   <tr>
-    <td><a href="docs/images/pcb-top-3d.png"><img src="docs/images/pcb-top-3d.png" alt="Top 3D" width="100%"></a></td>
-    <td><a href="docs/images/pcb-bottom-3d.png"><img src="docs/images/pcb-bottom-3d.png" alt="Bottom 3D" width="100%"></a></td>
-    <td><a href="docs/images/hero-assembled.jpg"><img src="docs/images/hero-assembled.jpg" alt="Assembled" width="100%"></a></td>
+    <td align="center" style="width:50%; padding:6px;">
+      <a href="docs/images/pcb-top-3d.png">
+        <img src="docs/images/pcb-top-3d.png" alt="PCB Top 3D Render" style="width:100%; max-width:100%;">
+      </a>
+      <div><sub>1) PCB Top 3D</sub></div>
+    </td>
+    <td align="center" style="width:50%; padding:6px;">
+      <a href="docs/images/pcb-bottom-3d.png">
+        <img src="docs/images/pcb-bottom-3d.png" alt="PCB Bottom 3D Render" style="width:100%; max-width:100%;">
+      </a>
+      <div><sub>2) PCB Bottom 3D</sub></div>
+    </td>
   </tr>
   <tr>
-    <td align="center"><sub>Top 3D</sub></td>
-    <td align="center"><sub>Bottom 3D</sub></td>
-    <td align="center"><sub>Assembled</sub></td>
+    <td colspan="2" align="center" style="padding:6px;">
+      <a href="docs/images/hero-assembled.jpg">
+        <img src="docs/images/hero-assembled.jpg" alt="Assembled Board Photo" style="width:60%; max-width:800px;">
+      </a>
+      <div><sub>3) Assembled</sub></div>
+    </td>
   </tr>
 </table>
 
-
-
+**이미지 설명**
+1. **PCB Top 3D** — LoRa/GPS/Iridium, SDRAM×4(차폐 시편), SD, 전원, 센서 등 **주요 블록 위치** 확인용 렌더링.
+2. **PCB Bottom 3D** — **디코더/디캡 배치**와 **리턴 경로·신호 라우팅 흐름** 확인용 렌더링.
+3. **Assembled** — 조립 완료 **실물 사진**(디버그 헤더/점퍼 위치 확인에 유용).
 
 ---
 
