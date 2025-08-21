@@ -5,8 +5,8 @@
 
 <!-- Hero: 3-up gallery -->
 <p align="center">
-  <a href="docs/images/pcb-top.png">
-    <img src="docs/images/pcb-top.png" alt="PCB Top 3D Render" width="32%">
+  <a href="docs/images/pcb-top-3d.png">
+    <img src="docs/images/pcb-top-3d.png" alt="PCB Top 3D Render" width="32%">
   </a>
   <a href="docs/images/pcb-bottom.png">
     <img src="docs/images/pcb-bottom.png" alt="PCB Bottom 3D Render" width="32%">
